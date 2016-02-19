@@ -4,7 +4,9 @@ import javax.swing.*;
 import java.awt.Color;
 import javax.swing.table.DefaultTableModel;
 
-public class TwoDPanel 
+import morning.controller.TwoDController;
+
+public class TwoDPanel extends JPanel
 {
 	private TwoDController baseController;
 	private SpringLayout baseLayout;
@@ -40,7 +42,7 @@ public class TwoDPanel
 	private void setupTable()
 	{
 		String [] columnHeaders = {"Column 0", "Column 1", "Column 2"};
-		DefaultTabelModel tableModel = new DefaultTabelModel(baseController.getMyAlienPod(), columnHeaders);
+		DefaultTableModel tableModel = new DefaultTableModel(baseController.getMyAlienPod(), columnHeaders);
 		alienTable = new JTable(tableModel); 
 	}
 	

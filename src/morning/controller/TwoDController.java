@@ -1,7 +1,9 @@
 package morning.controller;
 
 import morning.model.AlienPod;
+import morning.view.TwoDFrame;
 import java.awt.Color;
+import javax.swing.JFrame;
 
 public class TwoDController 
 {
