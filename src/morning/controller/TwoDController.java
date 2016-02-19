@@ -1,6 +1,7 @@
 package morning.controller;
 
 import morning.model.AlienPod;
+import java.awt.Color;
 
 public class TwoDController 
 {
@@ -10,12 +11,13 @@ public class TwoDController
 	public TwoDController()
 	{
 		myAlienPod = new AlienPod[3][3];
+		setupArray();
 		baseFrame = new TwoDFrame(this);
 	}
 	
 	public void start()
 	{
-		setupArray();
+		
 	}
 	
 	private void setupArray()
@@ -27,17 +29,17 @@ public class TwoDController
 				myAlienPod[row][col] = new AlienPod();
 				if(col % 2 == 0)
 				{
-					myAlienPod[row][col]
+					myAlienPod[row][col].setAmountOfGoo(col + 5);
 				}
 				else
 				{
-					
+					myAlienPod[row][col].setAlienColor(Color.BLUE);
 				}
 			}
 		}
 	}
 	
-	public AlienPod [][] getMyAlienPods()
+	public AlienPod [][] getMyAlienPod()
 	{
 		return myAlienPod;
 	}
