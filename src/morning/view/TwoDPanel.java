@@ -43,7 +43,7 @@ public class TwoDPanel extends JPanel
 	{
 		String [] columnHeaders = {"Column 0", "Column 1", "Column 2"};
 		DefaultTableModel tableModel = new DefaultTableModel(baseController.getMyAlienPod(), columnHeaders);
-		alienTable = new JTable(tableModel); 
+		alienPodTable = new JTable(tableModel); 
 	}
 	
 	private void setupPanel()
